@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Fields</title>
+        <link rel="icon" type="image/x-icon" href="anime-icon.jpg">
+        <style>
+            /* General input field styles */
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('https://cdn.dribbble.com/userupload/18106550/file/original-60454fee4f53fa6dc45adfbab0cc2577.png?resize=400x0'); /* Add your icon here */
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                padding-left: 40px;
+            }
+
+            /* Input field on focus */
+            input[type=text]:focus {
+                background-color: lightblue;
+                border-color: #007bff;
+                outline: none;
+            }
+
+            /* Add a label style for clarity */
+            label {
+                font-size: 16px;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            /* Style for the container */
+            form {
+                width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <!--Anime Preferences-->
+        <h2 align="center">Anime Preferences</h2>
+
+        <form>
+            <label for="anime-character"><span align="center">Favorite Anime Character</span></label>
+            <input type="text" id="anime-character" name="anime-character" placeholder="E.g., Naruto, Luffy" required>
+    
+            <label for="anime-genre">Preferred Anime Genre</label>
+            <!--Anime Genres-->
+            <select id="anime-genre" name="anime-genre" required>
+                <option value="action">Action</option>
+                <option value="shonen">Shonen</option>
+                <option value="romance">Romance</option>
+                <option value="slice-of-life">Slice of Life</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mecha">Mecha</option>
+                <option value="comedy">Comedy</option>
+            </select>
+        </form>
+    </body>
+</html>

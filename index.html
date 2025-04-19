@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FINAL PROJECT</title>
+        <link rel="icon" type="image/x-icon" href="simbillo-paint.png">
+        <link rel="stylesheet" href="index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Doto:wght@100..900&family=Mogra&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <!--HEADER-->
+        <header>
+            <div class="nav-header">
+                <div class="logo-creator">
+                    <img class="logo" src="simbillo-paint.png" alt="logo">
+                    <span class="creator">Simbillo's Project Website</span>
+                </div>
+                <nav>
+                    <ul class="navigation-bar">
+                        <li><a href="#" id="home-link">Home</a></li>
+                        <li><a href="#" id="projects-link">Projects</a></li>
+                        <li><a href="#" id="about-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+
+        <!--HOME PAGE-->
+        <section id="home-section">
+            <div class="home-page">
+                <h1 class="welcoming-text">
+                    <span>W</span>
+                    <span>E</span>
+                    <span>L</span>
+                    <span>C</span>
+                    <span>O</span>
+                    <span>M</span>
+                    <span>E</span>
+                </h1>
+                <br>
+                <video class="welcome-video" autoplay loop playsinline controls>
+                    <source src="Greetings Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+        <!--PROJECT PAGE-->
+        <section id="projects-section" style="display: none;">
+            <h2 style="text-align: center; margin: 20px 0;">My Projects</h2>
+        
+            <div style="text-align: center; margin-bottom: 20px;">
+                <button onclick="showProjectTab('html')" class="project-tab-html">HTML</button>
+                <button onclick="showProjectTab('css')" class="project-tab-css">CSS</button>
+                <button onclick="showProjectTab('js')" class="project-tab-js">JavaScript</button>
+            </div>
+        
+            <!--HTML PROJECTS-->
+            <div id="html-projects" class="project-tab">
+                <table align="center" cellpadding="20">
+                    <tr>
+                        <td><a href="htmlact1.html" target="_blank"><img src="1.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact2.html" target="_blank"><img src="2.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact3.html" target="_blank"><img src="3.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact4.html" target="_blank"><img src="4.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact5.html" target="_blank"><img src="5.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="htmlact6.html" target="_blank"><img src="6.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact7.html" target="_blank"><img src="7.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact8.html" target="_blank"><img src="8.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact9.html" target="_blank"><img src="9.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact10&11.html" target="_blank"><img src="10.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="htmlact12.html" target="_blank"><img src="11.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact13.html" target="_blank"><img src="12.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact14.html" target="_blank"><img src="13.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact15.html" target="_blank"><img src="14.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact16.html" target="_blank"><img src="15.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="htmlact17-19.html" target="_blank"><img src="16.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact20.html" target="_blank"><img src="17.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact21.html" target="_blank"><img src="18.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact22.html" target="_blank"><img src="19.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact23&24.html" target="_blank"><img src="20.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="htmlact25&26.html" target="_blank"><img src="21.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact27-33.html" target="_blank"><img src="22.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact34-35.html" target="_blank"><img src="23.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact36.html" target="_blank"><img src="24.png" width="200" height="200"></a></td>
+                        <td><a href="htmlact37-41.html" target="_blank"><img src="25.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="htmlQuiz1.html" target="_blank"><img src="26.png" width="200" height="200"></a></td>
+                        <td></td>
+                        <td><a href="htmlQuiz2.html" target="_blank"><img src="27.png" width="200" height="200"></a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--CSS PROJECTS-->
+            <div id="css-projects" class="project-tab" style="display: none;">
+                <table align="center" cellpadding="20">
+                    <tr>
+                        <td><a href="cssact1.html" target="_blank"><img src="28.png" width="200" height="200"></a></td>
+                        <td><a href="cssact2-4.html" target="_blank"><img src="29.png" width="200" height="200"></a></td>
+                        <td><a href="cssact5.html" target="_blank"><img src="30.png" width="200" height="200"></a></td>
+                        <td><a href="cssact6.html" target="_blank"><img src="31.png" width="200" height="200"></a></td>
+                        <td><a href="cssact7.html" target="_blank"><img src="32.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="cssact8.html" target="_blank"><img src="33.png" width="200" height="200"></a></td>
+                        <td><a href="cssact9.html" target="_blank"><img src="34.png" width="200" height="200"></a></td>
+                        <td><a href="cssact10.html" target="_blank"><img src="35.png" width="200" height="200"></a></td>
+                        <td><a href="cssact11-13.html" target="_blank"><img src="36.png" width="200" height="200"></a></td>
+                        <td><a href="cssact14.html" target="_blank"><img src="37.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="cssact15.html" target="_blank"><img src="38.png" width="200" height="200"></a></td>
+                        <td><a href="cssact16.html" target="_blank"><img src="39.png" width="200" height="200"></a></td>
+                        <td><a href="cssact17.html" target="_blank"><img src="40.png" width="200" height="200"></a></td>
+                        <td><a href="cssact18-20.html" target="_blank"><img src="41.png" width="200" height="200"></a></td>
+                        <td><a href="cssact21.html" target="_blank"><img src="42.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="cssact22.html" target="_blank"><img src="43.png" width="200" height="200"></a></td>
+                        <td><a href="cssact23.html" target="_blank"><img src="44.png" width="200" height="200"></a></td>
+                        <td><a href="cssact24.html" target="_blank"><img src="45.png" width="200" height="200"></a></td>
+                        <td><a href="cssact25.html" target="_blank"><img src="46.png" width="200" height="200"></a></td>
+                        <td><a href="cssact26.html" target="_blank"><img src="47.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="cssact27.html" target="_blank"><img src="48.png" width="200" height="200"></a></td>
+                        <td></td>
+                        <td><a href="cssact28&29.html" target="_blank"><img src="49.png" width="200" height="200"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="cssactother1&2.html" target="_blank"><img src="50.png" width="200" height="200"></a></td>
+                        <td><a href="cssactother3-5.html" target="_blank"><img src="51.png" width="200" height="200"></a></td>
+                        <td><a href="cssactother6.html" target="_blank"><img src="52.png" width="200" height="200"></a></td>
+                        <td><a href="cssactother7&8.html" target="_blank"><img src="53.png" width="200" height="200"></a></td>
+                        <td><a href="cssactother9-18.html" target="_blank"><img src="54.png" width="200" height="200"></a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--JS PROJECTS-->
+            <div id="js-projects" class="project-tab" style="display: none;">
+                <table align="center" cellpadding="20">
+                    <tr>
+                        <td><a href="jsact1.html" target="_blank"><img src="55.png" width="200" height="200"></a></td>
+                        <td><a href="jsact2.html" target="_blank"><img src="56.png" width="200" height="200"></a></td>
+                        <td><a href="jsact3.html" target="_blank"><img src="57.png" width="200" height="200"></a></td>
+                        <td><a href="jsact4.html" target="_blank"><img src="58.png" width="200" height="200"></a></td>
+                        <td><a href="jsact5.html" target="_blank"><img src="59.png" width="200" height="200"></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="jsact6.html" target="_blank"><img src="60.png" width="200" height="200"></a></td>
+                        <td><a href="jsact7.html" target="_blank"><img src="61.png" width="200" height="200"></a></td>
+                        <td><a href="jsact8.html" target="_blank"><img src="62.png" width="200" height="200"></a></td>
+                        <td><a href="jsact9.html" target="_blank"><img src="63.png" width="200" height="200"></a></td>
+                        <td><a href="jsact10.html" target="_blank"><img src="64.png" width="200" height="200"></a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <!--ABOUT ME PAGE-->
+        <section id="about-section" class="glass-card">
+            <div class="about-me-page">
+                <div class="about-image">
+                    <img src="Simbillo.png" alt="Simbillo, Justine Jericho M." />
+                </div>
+
+                <div class="about-info">
+                    <h2>Justine Jericho M. Simbillo</h2>
+                    <p><strong>Age:</strong> 21 years old</p>
+                    <p><strong>Course:</strong> Information Technology (IT)</p>
+                    <p><strong>University:</strong> Arellano University (Andres Bonifacio Campus)</p>
+                    <br>
+                    <p>
+                        An aspiring College student from Arellano University, Andres Bonifacio Campus, employed in the Information Technology (IT) Course Department, endeavors to study, work, and construct projects and undertakings related to the field specialization as a future web designer and developer and User Interface (UI) / User Experience (UX) designer, delivering innovative design creations and blueprints for people.
+                        Preliminarily maintained profound fundamentals in markup and programming languages, interconnected to computer coding such as Java, Python, HTML & CSS, and JavaScript in 2 years of consideration. In addition, apprehended the CISCO networks upon each examination assessment in 1 year.
+                        Adept in developing graphics design and digital illustrations using Canva, Figma, and Adobe Photoshop. And forming assembled documents and displayed presentations employing Microsoft Office 365, similarly Word, Excel, and PowerPoint.
+                        A multitasker with an adaptable and flexible mindset. Willingness to learn and make adjustments in constructive criticisms and feedback. And immaculate in owning a strong sense of leadership and experienced high-pressure situations within environmental work.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="index.js"></script>
+    </body>
+</html>

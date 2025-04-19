@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Style TextArea & Menu</title>
+        <link rel="icon" type="image/x-icon" href="book-icon.png">
+
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fde195; /* Soft cream background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background for the container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: #e4e4e4; /* Light grey background inside */
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c6b3b;
+            opacity: 0; 
+            transform: translateX(-100%);
+            animation: fadeInSlide 2s ease-in forwards; /* animation */
+        }
+
+        @keyframes fadeInSlide {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-size: 16px;
+            color: #3a4c3b; /* Dark green label */
+        }
+
+        input[type="text"], input[type="number"], select {
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #c2b6a3; /* Light tan border */
+            background-color: #f8f4e1; /* Light beige input background */
+            color: #3a4c3b; /* Dark green text for input fields */
+        }
+
+        input[type="submit"] {
+            background-color: #5a7e42; /* Forest green button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4d6836; /* Darker green on hover */
+        }
+
+        .book-category {
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #e3f2e1; /* Light green background */
+            border-radius: 4px;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #c2b6a3;
+            border-radius: 4px;
+            background-color: #f8f4e1;
+            font-size: 16px;
+            resize: none;
+        }
+
+        /* Select Menu Styling */
+        select {
+            width: 50%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f1f8e1; /* Pale yellowish background for select */
+        }
+
+        .book-list {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #5a7e42; /* Green header background */
+            color: white;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <h2>Library Management System</h2>
+        
+            <!-- Add New Book Form -->
+            <form id="add-book-form">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title" name="book-title" placeholder="Enter book title" required>
+            
+                <label for="book-author">Author:</label>
+                <input type="text" id="book-author" name="book-author" placeholder="Enter author name" required>
+            
+                <label for="book-category">Category:</label>
+                <select id="book-category" name="book-category" required>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="science">Science</option>
+                    <option value="biography">Biography</option>
+                </select>
+            
+                <label for="book-year">Year of Publication:</label>
+                <input type="number" id="book-year" name="book-year" placeholder="Enter publication year" required>
+            
+                <label for="book-description">Book Description:</label>
+                <textarea id="book-description" name="book-description" placeholder="Enter a brief description of the book"></textarea>
+            
+                <input type="submit" value="Add Book">
+            </form>
+            <br><br>
+        
+            <div class="book-category">
+              <h3>Available Books:</h3>
+              <div id="book-list-container"></div>
+            </div>
+          </div>
+        
+          <script>
+            // Store the books in an array (this could be a database in a real system)
+            const books = [];
+        
+            // Handle form submission
+            document.getElementById("add-book-form").addEventListener("submit", function(event) {
+              event.preventDefault();
+        
+              const title = document.getElementById("book-title").value;
+              const author = document.getElementById("book-author").value;
+              const category = document.getElementById("book-category").value;
+              const year = document.getElementById("book-year").value;
+              const description = document.getElementById("book-description").value;
+        
+              // Create a book object
+              const book = {
+                title: title,
+                author: author,
+                category: category,
+                year: year,
+                description: description
+              };
+        
+              // Add the book to the books array
+              books.push(book);
+        
+              // Reset the form
+              document.getElementById("add-book-form").reset();
+        
+              // Display the updated book list
+              displayBooks();
+            });
+        
+            // Function to display the books
+            function displayBooks() {
+                const bookListContainer = document.getElementById("book-list-container");
+            
+                // Clear the current list
+                bookListContainer.innerHTML = '';
+            
+                // Create a table to display books
+                const table = document.createElement("table");
+                const tableHeader = `
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Year</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                `;
+                table.innerHTML = tableHeader;
+            
+                const tableBody = document.createElement("tbody");
+            
+                books.forEach(book => {
+                    const row = document.createElement("tr");
+            
+                    row.innerHTML = `
+                    <td>${book.title}</td>
+                    <td>${book.author}</td>
+                    <td>${book.category}</td>
+                    <td>${book.year}</td>
+                    <td>${book.description}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            
+                table.appendChild(tableBody);
+                bookListContainer.appendChild(table);
+            }
+        </script>
+    </body>
+</html>

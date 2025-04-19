@@ -1,0 +1,53 @@
+.button {
+    background-color: #13251a; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+/* Button Colors */
+.button1 { background-color: #4CAF50; } /* Green */
+.button2 { background-color: #008CBA; } /* Blue */
+.button3 { background-color: #f44336; } /* Red */
+.button4 { background-color: #e7e7e7; color: black; } /* Gray */
+.button5 { background-color: #555555; } /* Black */
+
+/* Button Hover Effects */
+.button:hover {    
+    opacity: 0.8;
+}
+
+/* Button Sizes */
+.button-small { padding: 10px 24px; font-size: 12px; }
+.button-medium { padding: 16px 32px; font-size: 16px; }
+.button-large { padding: 20px 40px; font-size: 20px; }
+
+/* Rounded Buttons */
+.button-rounded1 { border-radius: 5px; background-color: #4bc4d4; }
+.button-rounded2 { border-radius: 15px; background-color: #4bc4d4; }
+.button-rounded3 { border-radius: 50%; background-color: #4bc4d4; }
+
+/* Button Borders */
+.button-border1 { border: 2px solid #4CAF50; background-color: #63115c; }
+.button-border2 { border: 2px solid #ba00b1; background-color: #1d4d2d; }
+
+/* Shadow Buttons */
+.button-shadow1 { 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: box-shadow 0.4s ease; /* Apply transition */
+    -webkit-transition: box-shadow 0.4s ease; /* Safari */
+  }
+
+.button-shadow2:hover { 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3); 
+    transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease; /* Safari */
+}

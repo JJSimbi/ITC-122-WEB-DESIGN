@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SpongeBob Image Carousel</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn.worldvectorlogo.com/logos/spongebob-squarepants-2.svg">
+        <style>
+            /* Carousel container with 2x2 inches size */
+            body{
+                padding-top:60px;
+                background: url(bikini-bottom.png) no-repeat fixed center/cover;
+            }
+            
+            .carousel {
+                width: 192px;  /* 2 inches in pixels */
+                height: 192px; /* 2 inches in pixels */
+                margin: 50px auto;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Carousel images container */
+            .carousel-images {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-images img {
+                width: 100%; /* Make each image fill the entire width of the container */
+                height: 100%; /* Make each image fill the entire height of the container */
+                object-fit: cover; /* Ensure the image aspect ratio is maintained */
+                border-radius: 10px;
+            }
+
+            /* Navigation buttons */
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 5px; /* Reduced padding for smaller size */
+                font-size: 16px; /* Adjusted for smaller size */
+                cursor: pointer;
+                border-radius: 50%;
+                z-index: 10;
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .next {
+                right: 10px;
+            }
+
+            /* Optional: Hover effect for buttons */
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            /* Style for character name text */
+            .character-name {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+                margin-top: 10px;
+                font-family: 'Arial', sans-serif;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            /* Animation effect for the character name */
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="carousel">
+            <div class="carousel-images">
+                <!-- Spongebob Images -->
+                <img src="spongebob.png" alt="Spongebob Image 1">
+                <img src="patrick.png" alt="Spongebob Image 2">
+                <img src="squidward.png" alt="Spongebob Image 3">
+                <img src="mr. krabs.png" alt="Spongebob Image 4">
+                <img src="sandy.png" alt="Spongebob Image 5">
+                <img src="gary.png" alt="Spongebob Image 6">
+                <img src="plankton.png" alt="Spongebob Image 7">
+            </div>
+            <!-- Navigation buttons -->
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+
+        <!-- Character Name Text Below Carousel -->
+        <div class="character-name" id="character-name">SpongeBob SquarePants</div>
+
+        <script>
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.carousel-images img');
+            const totalImages = images.length;
+            const carouselImages = document.querySelector('.carousel-images');
+            const characterNameText = document.getElementById('character-name');
+            
+            // Array of character names corresponding to the images
+            const characterNames = [
+                "SpongeBob SquarePants", 
+                "Patrick Star", 
+                "Squidward Tentacles", 
+                "Mr. Krabs", 
+                "Sandy Cheeks", 
+                "Gary the Snail", 
+                "Plankton"
+            ];
+
+            // Function to show the next image
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+                updateCarouselPosition();
+                updateCharacterName();
+            }
+
+            // Function to show the previous image
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image
+                updateCarouselPosition();
+                updateCharacterName();
+            }
+
+            // Function to update carousel position based on the current index
+            function updateCarouselPosition() {
+                carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            // Function to update character name text
+            function updateCharacterName() {
+                characterNameText.textContent = characterNames[currentIndex];
+            }
+
+            // Add event listeners for navigation buttons
+            document.querySelector('.next').addEventListener('click', showNextImage);
+            document.querySelector('.prev').addEventListener('click', showPrevImage);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 6</title>
+        <link rel="icon" type="image/x-icon" href="four-seasons.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body, html {
+                height: 100%;
+                font-family: "Rubik", sans-serif;
+                overflow: hidden;
+            }
+
+            /* Video Background Styling */
+            #bg-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                z-index: -1;
+            }
+
+            /* Centered Buttons Container */
+            .controls {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .controls button {
+                padding: 15px 30px;
+                margin: 10px;
+                font-size: 18px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s;
+                color: white;
+            }
+
+            .controls button:hover {
+                transform: scale(1.05);
+            }
+
+            .spring { background-color: #7ed957; }
+            .summer { background-color: #f9a602; }
+            .fall   { background-color: #d2691e; }
+            .winter { background-color: #00bfff; }
+
+            h1 {
+                color: white;
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Background Video -->
+        <video id="bg-video" autoplay muted loop>
+            <source src="SPRING.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Buttons -->
+        <div class="controls">
+            <h1>Select a Season</h1>
+            <button class="spring" onclick="changeSeason('SPRING')">Spring</button>
+            <button class="summer" onclick="changeSeason('SUMMER')">Summer</button>
+            <button class="fall" onclick="changeSeason('FALL')">Fall</button>
+            <button class="winter" onclick="changeSeason('WINTER')">Winter</button>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            function changeSeason(season) {
+                const video = document.getElementById("bg-video");
+                video.src = `${season}.mp4`;
+                video.play(); // Restart video when changing
+            }
+        </script>
+
+    </body>
+</html>

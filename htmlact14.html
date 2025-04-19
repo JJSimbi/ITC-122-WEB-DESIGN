@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RGBColor</title>
+        <link rel="icon" type="image/x-icon" href="https://veganuary.com/wp-content/uploads/2020/08/sheep.jpg">
+    </head>
+    <body text="rgb(241, 196, 15)" bgcolor="rgb(148, 0, 211)">
+        <center>
+            <br>
+            <!-- Sheep -->
+            <img id="sheepGif" src="https://media.tenor.com/RPxwPAdy4m8AAAAM/goat-tongue.gif" alt="sheep/lamb" width="175" height="250">
+            <!-- Wolf -->
+            <img id="wolfGif" src="https://media.tenor.com/bFdkO89KBf4AAAAM/lobo-wolf.gif" alt="scary-wolf" width="175" height="250" style="display:none;">
+        </center>
+        
+        <p align="center" style="font-size: 60px;"><q>A SHEEP'S CLOTHING IS ONE'S DISGUISE</q></p>
+
+        <!-- Button to trigger the GIF change -->
+        <center>
+            <button id="changeButton" onclick="changeGif()" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); padding: 15px 30px; font-size: 16px; border-radius: 30px; background-color: rgb(241, 196, 15); border: none; cursor: pointer;">
+                Click Here for Answer
+            </button>
+        </center>
+
+        <script>
+            function changeGif() {
+                // Hide the sheep GIF
+                document.getElementById('sheepGif').style.display = 'none';
+                // Reveal the scary wolf GIF
+                document.getElementById('wolfGif').style.display = 'block';
+                // Remove the button after being pressed
+                document.getElementById('changeButton').style.display = 'none';
+            }
+        </script>
+    </body>   
+</html>

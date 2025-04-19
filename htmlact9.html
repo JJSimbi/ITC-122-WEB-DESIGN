@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperlink</title>
+        <link rel="icon" type="image/x-icon" href="hyperlink.png">
+        <script>
+            function countReferences() 
+            {
+                // Get the list of references (li elements) under the 'ul' with id 'references-list'
+                var references = document.querySelectorAll('#reference-list li');
+                
+                // Get the total number of references
+                var totalReferences = references.length;
+
+                // Results
+                document.getElementById('total-references').innerText = "\u00A0\u00A0Total amount of Resources: " + totalReferences;
+            }
+            // Call the countReferences function when the page is loaded
+            window.onload = countReferences;
+        </script>
+        <style>
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+
+            /* Hover effect: Change color to orange */
+            a:hover {
+                color: orange;
+            }
+
+            /* Visited links: Change color to purple */
+            a:visited {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>&nbsp;REFERENCES:</h1> 
+        <!-- Display the total number of resources -->
+        <p id="total-references"></p>
+
+        <ul id="reference-list"> <!-- List of References -->
+            <li>
+                Brush, S. G., Osler, M. J., & Spencer, J. B. (2019, May 3). 
+                <em>Scientific revolution: Definition, history, scientists, inventions, & facts</em>. 
+                Encyclopedia Britannica. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.britannica.com/science/Scientific-Revolution" target="_blank">https://www.britannica.com/science/Scientific-Revolution</a>
+            </li>
+
+            <li>
+                Cartwright, M., & London, S. M. (2023). 
+                <em>6 key instruments of the scientific revolution</em>. 
+                World History Encyclopedia.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.worldhistory.org/article/2317/6-key-instruments-of-the-scientific-revolution/" target="_blank">https://www.worldhistory.org/article/2317/6-key-instruments-of-the-scientific-revolution/</a>
+            </li>
+
+            <li>
+                Duignan, B., & Leong, E. (n.d.). 
+                <em>Inventors and inventions of the industrial revolution: Stories & history</em>. 
+                Encyclopedia Britannica. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.britannica.com/list/inventors-and-inventions-of-the-industrial-revolution" target="_blank">https://www.britannica.com/list/inventors-and-inventions-of-the-industrial-revolution</a>
+            </li>
+
+            <li>
+                Eyeglasses | Medieval Chronicles. (2022, December 1). 
+                <em>Eyeglasses</em>. 
+                Medieval Chronicles. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/eyeglasses/" target="_blank">https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/eyeglasses/</a>
+            </li>
+
+            <li>
+                Mechanical clock | Medieval Chronicles. (2022, December 1). 
+                <em>Mechanical clock</em>. 
+                Medieval Chronicles. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/mechanical-clock/" target="_blank">https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/mechanical-clock/</a>
+            </li>
+
+            <li>
+                Printing press *Johannes Gutenberg | Medieval Chronicles. (2022, December 1). 
+                <em>Printing press</em>. 
+                Medieval Chronicles. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/printing-press/" target="_blank">https://www.medievalchronicles.com/medieval-history/medieval-inventions-list/printing-press/</a>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms 1</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6681/6681204.png">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(135deg, #235039, #6fbf73);
+                margin: 0;
+            }
+            .login-container {
+                background: rgba(255, 255, 255, 0.5); /* semi-transparent */
+                padding: 40px;
+                border-radius: 16px;
+                backdrop-filter: blur(6px);
+                -webkit-backdrop-filter: blur(6px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                color: #000; /* Keep text dark for readability */
+            }
+            h1 {
+                text-align: center;
+                font-size: 24px;
+                color: #333;
+            }
+            input[type="text"], input[type="password"] {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            .login {
+                width: 100%;
+                padding: 12px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .login:hover {
+                background-color: #45a049;
+            }
+            .signup-link {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            .signup-link a {
+                text-decoration: none;
+                color: #00c707;
+            }
+            .signup-link a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>Login Page</h1>
+            <br>
+            <form action="/submit-login" method="POST">
+                <!--Single Line-->
+                <label for="username"><font size="2">Username or Email</font></label>
+                <input type="text" id="username" name="username" placeholder="Enter your username address" required>
+
+                <!--Password Input-->
+                <label for="password"><font size="2">Password</font></label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br>
+                <br>
+                <a href="htmlQuiz2.html">
+                    <button type="button" class="login">Login</button>
+                </a>
+            </form>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="htmlQuiz2.html">Sign up</a></p>
+            </div>
+        </div>
+    </body>
+</html>

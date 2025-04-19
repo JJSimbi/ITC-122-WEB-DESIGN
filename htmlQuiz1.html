@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday Calendar</title>
+        <link rel="icon" type="image/x-icon" href="poke-bday-cake.png">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Doodle+Shadow&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Potta One">
+        <style>
+            body{
+                background-image:url("pokemon-cafe-remix-bg.png");
+                background-size:cover;
+                background-position:center;
+                background-attachment: fixed;
+                margin-top: 155px;
+                padding: 10px;
+            }
+            #table{
+                background-image:url("pokemon-confetti.png");
+                border-radius: 15px;
+                table-layout: fixed;
+                padding:10px
+            }
+            #Birth_month{
+                background-image: url("pokemon-glitter.gif");
+                background-position: center;
+                color:#ca6e79;
+                font-family: "Pacifico", cursive;
+                font-size:50px;
+                text-shadow: 3px 3px 3px #5a0126;
+            }
+            #seven-days{
+                background-color: rgb(195, 255, 183);
+                font-family: Helvetica;
+            }
+            .days{
+                background-color: #c9c9d5;
+                font-family: "Potta One";
+            }
+            .poke-bday-cake {
+                position: absolute;
+                top: 18%;
+                left: 50%;
+                width: 30%;
+                height: 250px;
+                transform: translate(-50%, -50%);
+                z-index: -2;
+            }
+
+            .poke-latios{
+                position: absolute;
+                top: 18%;
+                left: 62%;
+                width: 20%;
+                height: 250px;
+                transform: translate(-50%, -50%);
+                z-index: -3;
+            }
+
+            .poke-latias{
+                position: absolute;
+                top: 19.5%;
+                left: 38%;
+                width: 20%;
+                height: 250px;
+                transform: translate(-50%, -50%);
+                z-index: -3;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="poke-bday-cake.png" alt="bday-cake" class="poke-bday-cake"><br>
+            <img src="poke-latios.png" alt="bday-cake" class="poke-latios">
+            <img src="poke-latias.png" alt="bday-cake" class="poke-latias">
+        </div>
+        <table id="table" border="2" width="75%" align="center" cellpadding="10" cellspacing="1">
+            <tr>
+                <th id="Birth_month" colspan="7" style="text-align: center;">
+                    <img src="pikachu-left.png" alt="pikachu" width="80" height="80" style="vertical-align: middle; padding-bottom: 10px;">&nbsp;
+                    October &nbsp;2003&nbsp;
+                    <img src="pikachu-right.png" alt="pikachu" width="80" height="80" style="vertical-align: middle; padding-bottom: 10px;">
+                </th>
+            </tr>
+            <tr id="seven-days">
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr class="days" style="text-align: center;">
+                <td colspan="3" style="background-image: url('pokemon-cafe-remix.png'); background-position: bottom; background-size: cover;"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr class="days" style="text-align: center;">
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+            <tr class="days" style="text-align: center;">
+                <td>12</td>
+                <td>13</td>
+                <td style="background-image: url('bday-stars.gif'); background-size:cover;">14</td>     <!--Birth DATE-DAY-->
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr class="days" style="text-align: center;">
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+            <tr class="days" style="text-align: center;">
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td style="background-image: url('poke-cinderace-food.png'); background-position: bottom; background-size: cover;"></td>
+            </tr>
+        </table>
+    </body>
+</html>

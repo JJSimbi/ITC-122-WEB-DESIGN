@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 2</title>
+        <link rel="icon" type="image/x-icon" href="JavaScript.png">
+
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #7d7e80;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                color: #333;
+            }
+
+            #numerical-operation {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 600px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2em;
+                color: #555;
+                margin: 10px 0;
+                line-height: 1.6;
+            }
+
+            /* Button Styling */
+            button {
+                padding: 8px 16px;
+                background-color: #904caf;
+                border: none;
+                color: white;
+                font-size: 1.1em;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #a04585;
+            }
+
+            /* Styling for the result */
+            .result {
+                font-weight: bold;
+                color: #5e6d15;
+                font-size: 1.5em;
+                padding: 5px;
+                background-color: #f5f5e4;
+                border-radius: 4px;
+                margin-left: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .result:hover {
+                background-color: #48355a;
+                color: white;
+                transform: scale(1.1);
+            }
+
+            h2 {
+                font-size: 2em;
+                color: #7a4caf;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="numerical-operation">
+            <!--Mathematical Operations-->
+            <p>
+                Numerical Operation [Addition]: 
+                <button type="button" onclick="showResult(5 + 6)">5+6</button>
+                <span id="addition-result" class="result"></span>
+            </p>
+            <p>
+                Numerical Operation [Subtraction]: 
+                <button type="button" onclick="showResult(10 - 7)">10-7</button>
+                <span id="substract-result" class="result"></span>
+            </p>
+            <p>
+                Numerical Operation [Multiplication]: 
+                <button type="button" onclick="showResult(5 * 10)">5*10</button>
+                <span id="multiply-result" class="result"></span>
+            </p>
+            <p>
+                Numerical Operation [Division]: 
+                <button type="button" onclick="showResult(25 / 5)">25/5</button>
+                <span id="division-result" class="result"></span>
+            </p>
+        </div>
+
+        <script>
+            function showResult(result) {
+                // Get the button's correspondance and reveal the result
+                const resultElement = event.target.nextElementSibling;
+                resultElement.textContent = result;
+            }
+        </script>
+    </body>
+</html>

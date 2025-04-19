@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 3</title>
+        <link rel="icon" type="image/x-icon" href="JavaScript.png">
+        <style>
+            body {
+                font-family: 'Georgia', serif;
+                background-color: #f0e6d2;
+                color: #4a3f35;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            .Figuratives {
+                text-align: center;
+                background-color: #fff5e1;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 600px;
+            }
+
+            h2 {
+                color: #7a793b;
+                font-family: 'Times New Roman', serif;
+                font-size: 2em;
+            }
+
+            button {
+                padding: 9px 9px;
+                font-size: 1.1em;
+                background-color: #c09e40;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-family: 'Georgia', serif;
+            }
+
+            button:hover {
+                background-color: #4d3316;
+            }
+
+            .output {
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #f4ebd7;
+                border-radius: 8px;
+                font-size: 1.2em;
+                color: #4a3f35;
+                display: none;
+            }
+
+            .output.show {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Figurative Languages-->
+        <div class="Figuratives">
+            <h2>Learn About Figurative Language</h2>
+            <button onclick="showFigurativeLanguage('simile')">Simile</button>
+            <button onclick="showFigurativeLanguage('metaphor')">Metaphor</button>
+            <button onclick="showFigurativeLanguage('personification')">Personification</button>
+            <button onclick="showFigurativeLanguage('idiom')">Idiom</button>
+            <button onclick="showFigurativeLanguage('hyperbole')">Hyperbole</button>
+
+            <div id="output" class="output"></div>
+        </div>
+
+        <script>
+            function showFigurativeLanguage(languageType) {
+                const outputElement = document.getElementById('output');
+                let explanation = '';
+                let example = '';
+
+                switch(languageType) {
+                    case 'simile':
+                        explanation = 'A simile compares two different things using the words "like" or "as".';
+                        example = '"Her smile was as bright as the sun."';
+                        break;
+                    case 'metaphor':
+                        explanation = 'A metaphor directly compares two different things without using "like" or "as".';
+                        example = '"Time is a thief."';
+                        break;
+                    case 'personification':
+                        explanation = 'Personification gives human qualities to animals, objects, or abstract ideas.';
+                        example = '"The wind whispered through the trees."';
+                        break;
+                    case 'idiom':
+                        explanation = 'An idiom is a phrase where the meaning is different from the literal meaning of the words.';
+                        example = '"It\'s raining cats and dogs."';
+                        break;
+                    case 'hyperbole':
+                        explanation = 'A hyperbole is an exaggerated statement that is not meant to be taken literally.';
+                        example = '"I have a ton of homework."';
+                        break;
+                    default:
+                        explanation = 'Click a button to learn about different figurative language types!';
+                }
+
+                outputElement.innerHTML = `<strong>${languageType.charAt(0).toUpperCase() + languageType.slice(1)}</strong><br><br><i>${explanation}</i><br><br><strong>Example:</strong> ${example}`;
+                outputElement.classList.add('show');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 7</title>
+        <link rel="icon" type="image/x-icon" href="calculator.png">
+
+        <style>
+            #output{background-color: bisque; border:1px solid; height: 50%; width:177px;}
+        </style>
+    </head>
+
+    <body style="background-image: url(calculator-background.png);">
+
+        <h2>Student Grade Calculator</h2>
+
+        <label>Student Name:</label><br>    <!--Student Name-->
+        <input type="text" id="studentName"><br><br>
+
+        <label>Mathematics:</label><br>     <!--Mathematics-->
+        <input type="number" id="score1"><br><br>
+
+        <label>Science:</label><br>         <!--Science-->
+        <input type="number" id="score2"><br><br>
+
+        <label>English Literature:</label><br>  <!--English-->
+        <input type="number" id="score3"><br><br>
+
+        <button onclick="calculateGrade()">Calculate</button>
+
+        <h3>Results:</h3>
+        <p id="output"></p>
+
+        <script src="jsact7.js"></script>
+
+    </body>
+</html>

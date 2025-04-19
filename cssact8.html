@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InternalCSS</title>
+
+        <link rel="icon" type="image/x-icon" href="faker-emote.png">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                background: url(faker_and_chovy.gif) no-repeat fixed center/cover;
+                text-align: center;
+                font-family: 'Bangers', sans-serif;
+                letter-spacing: 3px;
+                line-height: 1;
+                transition: background 0.5s ease-in-out;
+            }
+
+            .chovy, .faker {
+                width: 400px;
+                height: 400px;
+                margin: 90px 50px 0px;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .chovy img, .faker img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            /* Text overlay on image-hover */
+            .chovy .overlay, .faker .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.50); /* Dark overlay with 50% opacity */
+                color: white;
+                font-size: 80px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0; /* Initially hidden */
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            /* Hover effect for the images */
+            .chovy:hover img, .faker:hover img {
+                opacity: 0.5; /* Make image 50% visible */
+            }
+
+            .chovy:hover .overlay, .faker:hover .overlay {
+                opacity: 1; /* Show text overlay on hover */
+            }
+
+            /* Hidden images */
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p align="center">
+            <!-- Chovy with overlay text -->
+            <div class="chovy" onclick="changeBackground('chovy')">
+                <img src="lol_Chovy_card.png" alt="chovy_lol" class="chovy-img">
+                <div class="overlay">CHURCH OF CHOVY</div>
+            </div>
+
+            <!-- Faker with overlay text -->
+            <div class="faker" onclick="changeBackground('faker')">
+                <img src="lol_Faker_card.png" alt="faker_lol" class="faker-img">
+                <div class="overlay">FAKER THE G.O.A.T</div>
+            </div>
+        </p>
+
+        <script>
+            function changeBackground(player) {
+                const body = document.body;
+                const chovyImage = document.querySelector('.chovy');
+                const fakerImage = document.querySelector('.faker');
+                const chovyImgTag = document.querySelector('.chovy-img');
+                const fakerImgTag = document.querySelector('.faker-img');
+
+                // Change background from the image-cards
+                if (player === 'chovy') {
+                    body.style.backgroundImage = "url('chovy-bg.gif')"; // Change to Chovy's bg
+                    chovyImage.classList.add('hidden'); // Hide Chovy Card
+                    fakerImage.classList.add('hidden'); // Hide Faker Card
+                } else if (player === 'faker') {
+                    body.style.backgroundImage = "url('faker-bg.gif')"; // Change to Faker's bg
+                    chovyImage.classList.add('hidden'); // Hide Chovy Card
+                    fakerImage.classList.add('hidden'); // Hide Faker Card
+                }
+
+                // After 20 seconds, return/revert the changes
+                setTimeout(function() {
+                    body.style.backgroundImage = "url('faker_and_chovy.gif')"; // Revert to original background
+                    chovyImage.classList.remove('hidden'); // Show Chovy Card again
+                    fakerImage.classList.remove('hidden'); // Show Faker Card again
+                }, 20000); // 20 seconds delay
+            }
+        </script>
+    </body>
+</html>

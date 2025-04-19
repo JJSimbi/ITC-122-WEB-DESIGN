@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Selector</title>
+        <link rel="icon" type="image/x-icon" href="periodic-table-favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            .empty-spaces{border: 0; width:100%; font-size:8px;}
+            .elements{font-family: 'Inter', sans-serif;}
+            .label{font-size:9.5px;}
+
+            th.elements{font-size:15px;}
+            h1.label{font-size:30px; font-family: 'IBM Plex Sans', sans-serif; text-align: center; color:antiquewhite}
+
+            th.non-metal{background-color: #f6ffa1;}
+            th.noble-gases{background-color: #ffec98;}
+            th.alkali-metal{background-color: #f1b4b4;}
+            th.alkaline-earth-metal{background-color: #a3afc7;}
+            th.metalloid{background-color: #acc9ac;}
+            th.transition-metal{background-color: #acc0ff;}
+            th.post-transition-metal{background-color: #86d186;}
+            th.lanthanide{background-color: #8cfaf1;}
+            th.actinide{background-color: #c3e4f7;}
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th{
+                border: 1px solid #000;
+                text-align: center;
+                padding: 8px;
+                word-wrap: break-word;
+            }
+
+            body{
+                background-image: url(chalkboard.png);
+                background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1 class="label"><u><b>PERIODIC TABLE OF ELEMENTS</b></u></h1>
+        <table align="center" cellspacing="1" cellpadding="5" width="100%">
+            <tr>
+                <th class="elements non-metal"><font size="1">1</font><br><br>H<br><span class="label">Hydrogen</span></th>
+                <th class="empty-spaces" colspan="16"></th>
+                <th class="elements noble-gases"><font size="1">2</font><br><br>He<br><span class="label">Helium</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">3</font><br><br>Li<br><span class="label">Lithium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">4</font><br><br>Be<br><span class="label">Beryllium</span></th>
+                <th class="empty-spaces" colspan="10"></th>
+                <th class="elements metalloid"><font size="1">5</font><br><br>B<br><span class="label">Boron</span></th>
+                <th class="elements non-metal"><font size="1">6</font><br><br>C<br><span class="label">Carbon</span></th>
+                <th class="elements non-metal"><font size="1">7</font><br><br>N<br><span class="label">Nitrogen</span></th>
+                <th class="elements non-metal"><font size="1">8</font><br><br>O<br><span class="label">Oxygen</span></th>
+                <th class="elements non-metal"><font size="1">9</font><br><br>F<br><span class="label">Fluorine</span></th>
+                <th class="elements noble-gases"><font size="1">10</font><br><br>Ne<br><span class="label">Neon</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">11</font><br><br>Na<br><span class="label">Sodium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">12</font><br><br>Mg<br><span class="label">Magnesium</span></th>
+                <th class="empty-spaces" colspan="10"></th>
+                <th class="elements post-transition-metal"><font size="1">13</font><br><br>Al<br><span class="label">Aluminum</span></th>
+                <th class="elements metalloid"><font size="1">14</font><br><br>Si<br><span class="label">Silicon</span></th>
+                <th class="elements non-metal"><font size="1">15</font><br><br>P<br><span class="label">Phosporus</span></th>
+                <th class="elements non-metal"><font size="1">16</font><br><br>S<br><span class="label">Sulfur</span></th>
+                <th class="elements non-metal"><font size="1">17</font><br><br>Cl<br><span class="label">Chlorine</span></th>
+                <th class="elements noble-gases"><font size="1">18</font><br><br>Ar<br><span class="label">Argon</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">19</font><br><br>K<br><span class="label">Potassium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">20</font><br><br>Ca<br><span class="label">Calcium</span></th>
+                <th class="elements transition-metal"><font size="1">21</font><br><br>Sc<br><span class="label">Scandium</span></th>
+                <th class="elements transition-metal"><font size="1">22</font><br><br>Ti<br><span class="label">Titanium</span></th>
+                <th class="elements transition-metal"><font size="1">23</font><br><br>V<br><span class="label">Vanadium</span></th>
+                <th class="elements transition-metal"><font size="1">24</font><br><br>Cr<br><span class="label">Chromium</span></th>
+                <th class="elements transition-metal"><font size="1">25</font><br><br>Mn<br><span class="label">Manganese</span></th>
+                <th class="elements transition-metal"><font size="1">26</font><br><br>Fe<br><span class="label">Iron</span></th>
+                <th class="elements transition-metal"><font size="1">27</font><br><br>Co<br><span class="label">Cobalt</span></th>
+                <th class="elements transition-metal"><font size="1">28</font><br><br>Ni<br><span class="label">Nickel</span></th>
+                <th class="elements transition-metal"><font size="1">29</font><br><br>Cu<br><span class="label">Copper</span></th>
+                <th class="elements transition-metal"><font size="1">30</font><br><br>Zn<br><span class="label">Zinc</span></th>
+                <th class="elements post-transition-metal"><font size="1">31</font><br><br>Ga<br><span class="label">Gallium</span></th>
+                <th class="elements metalloid"><font size="1">32</font><br><br>Ge<br><span class="label">Germanium</span></th>
+                <th class="elements metalloid"><font size="1">33</font><br><br>As<br><span class="label">Arsenic</span></th>
+                <th class="elements non-metal"><font size="1">34</font><br><br>Se<br><span class="label">Selenium</span></th>
+                <th class="elements non-metal"><font size="1">35</font><br><br>Br<br><span class="label">Bromine</span></th>
+                <th class="elements noble-gases"><font size="1">36</font><br><br>Kr<br><span class="label">Krypton</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">37</font><br><br>Rb<br><span class="label">Rubidium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">38</font><br><br>Sr<br><span class="label">Strontium</span></th>
+                <th class="elements transition-metal"><font size="1">39</font><br><br>Y<br><span class="label">Yttrium</span></th>
+                <th class="elements transition-metal"><font size="1">40</font><br><br>Zr<br><span class="label">Zirconium</span></th>
+                <th class="elements transition-metal"><font size="1">41</font><br><br>Nb<br><span class="label">Niobium</span></th>
+                <th class="elements transition-metal"><font size="1">42</font><br><br>Mo<br><span class="label">Molybdenum</span></th>
+                <th class="elements transition-metal"><font size="1">43</font><br><br>Tc<br><span class="label">Technetium</span></th>
+                <th class="elements transition-metal"><font size="1">44</font><br><br>Ru<br><span class="label">Ruthenium</span></th>
+                <th class="elements transition-metal"><font size="1">45</font><br><br>Rh<br><span class="label">Rhodium</span></th>
+                <th class="elements transition-metal"><font size="1">46</font><br><br>Pd<br><span class="label">Palladium</span></th>
+                <th class="elements transition-metal"><font size="1">47</font><br><br>Ag<br><span class="label">Silver</span></th>
+                <th class="elements transition-metal"><font size="1">48</font><br><br>Cd<br><span class="label">Cadmium</span></th>
+                <th class="elements post-transition-metal"><font size="1">49</font><br><br>In<br><span class="label">Indium</span></th>
+                <th class="elements post-transition-metal"><font size="1">50</font><br><br>Sn<br><span class="label">Tin</span></th>
+                <th class="elements metalloid"><font size="1">51</font><br><br>Sb<br><span class="label">Antimony</span></th>
+                <th class="elements metalloid"><font size="1">52</font><br><br>Te<br><span class="label">Tellurium</span></th>
+                <th class="elements non-metal"><font size="1">53</font><br><br>I<br><span class="label">Iodine</span></th>
+                <th class="elements noble-gases"><font size="1">54</font><br><br>Xe<br><span class="label">Xenon</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">55</font><br><br>Cs<br><span class="label">Cesium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">56</font><br><br>Ba<br><span class="label">Barium</span></th>
+                <th class="elements lanthanide"><font size="1">57-71</font><br><br><span class="label"></span></th>
+                <th class="elements transition-metal"><font size="1">72</font><br><br>Hf<br><span class="label">Hafnium</span></th>
+                <th class="elements transition-metal"><font size="1">73</font><br><br>Ta<br><span class="label">Tantalum</span></th>
+                <th class="elements transition-metal"><font size="1">74</font><br><br>W<br><span class="label">Tungsten</span></th>
+                <th class="elements transition-metal"><font size="1">75</font><br><br>Re<br><span class="label">Rhenium</span></th>
+                <th class="elements transition-metal"><font size="1">76</font><br><br>Os<br><span class="label">Osmium</span></th>
+                <th class="elements transition-metal"><font size="1">77</font><br><br>Ir<br><span class="label">Iridium</span></th>
+                <th class="elements transition-metal"><font size="1">78</font><br><br>Pt<br><span class="label">Platinum</span></th>
+                <th class="elements transition-metal"><font size="1">79</font><br><br>Au<br><span class="label">Gold</span></th>
+                <th class="elements transition-metal"><font size="1">80</font><br><br>Hg<br><span class="label">Mercury</span></th>
+                <th class="elements post-transition-metal"><font size="1">81</font><br><br>Tl<br><span class="label">Thallium</span></th>
+                <th class="elements post-transition-metal"><font size="1">82</font><br><br>Pb<br><span class="label">Lead</span></th>
+                <th class="elements post-transition-metal"><font size="1">83</font><br><br>Bi<br><span class="label">Bismuth</span></th>
+                <th class="elements metalloid"><font size="1">84</font><br><br>Po<br><span class="label">Polonium</span></th>
+                <th class="elements non-metal"><font size="1">85</font><br><br>At<br><span class="label">Astatine</span></th>
+                <th class="elements noble-gases"><font size="1">86</font><br><br>Rn<br><span class="label">Radon</span></th>
+            </tr>
+            <tr>
+                <th class="elements alkali-metal"><font size="1">87</font><br><br>Fr<br><span class="label">Francium</span></th>
+                <th class="elements alkaline-earth-metal"><font size="1">88</font><br><br>Ra<br><span class="label">Radium</span></th>
+                <th class="elements actinide"><font size="1">89-103</font><br><br><span class="label"></span></th>
+                <th class="elements transition-metal"><font size="1">104</font><br><br>Rf<br><span class="label">Rutherfordium</span></th>
+                <th class="elements transition-metal"><font size="1">105</font><br><br>Db<br><span class="label">Dubnium</span></th>
+                <th class="elements transition-metal"><font size="1">106</font><br><br>Sg<br><span class="label">Seaborgium</span></th>
+                <th class="elements transition-metal"><font size="1">107</font><br><br>Bh<br><span class="label">Bohrium</span></th>
+                <th class="elements transition-metal"><font size="1">108</font><br><br>Hs<br><span class="label">Hassium</span></th>
+                <th class="elements transition-metal"><font size="1">109</font><br><br>Mt<br><span class="label">Meitnerium</span></th>
+                <th class="elements transition-metal"><font size="1">110</font><br><br>Ds<br><span class="label">Darmstadtium</span></th>
+                <th class="elements transition-metal"><font size="1">111</font><br><br>Rg<br><span class="label">Roentgenium</span></th>
+                <th class="elements transition-metal"><font size="1">112</font><br><br>Cn<br><span class="label">Copernicium</span></th>
+                <th class="elements post-transition-metal"><font size="1">113</font><br><br>Nh<br><span class="label">Nihonium</span></th>
+                <th class="elements post-transition-metal"><font size="1">114</font><br><br>Fl<br><span class="label">Flerovium</span></th>
+                <th class="elements post-transition-metal"><font size="1">115</font><br><br>Mc<br><span class="label">Moscovium</span></th>
+                <th class="elements post-transition-metal"><font size="1">116</font><br><br>Lv<br><span class="label">Livermorium</span></th>
+                <th class="elements non-metal"><font size="1">117</font><br><br>Ts<br><span class="label">Tennessine</span></th>
+                <th class="elements noble-gases"><font size="1">118</font><br><br>Og<br><span class="label">Oganesson</span></th>
+            </tr>
+            <tr>
+                <th class="empty-spaces" colspan="18"></th>
+            </tr>
+            <tr>
+                <th class="empty-spaces" colspan="18"></th>
+            </tr>
+            <tr>
+                <th class="empty-spaces" colspan="18"></th>
+            </tr>
+            <tr>
+                <th class="empty-spaces" colspan="3"></th>
+                <th class="elements lanthanide"><font size="1">57</font><br><br>La<br><span class="label">Lanthanum</span></th>
+                <th class="elements lanthanide"><font size="1">58</font><br><br>Ce<br><span class="label">Cerium</span></th>
+                <th class="elements lanthanide"><font size="1">59</font><br><br>Pr<br><span class="label">Praseodymium</span></th>
+                <th class="elements lanthanide"><font size="1">60</font><br><br>Nd<br><span class="label">Neodymium</span></th>
+                <th class="elements lanthanide"><font size="1">61</font><br><br>Pm<br><span class="label">Promethium</span></th>
+                <th class="elements lanthanide"><font size="1">62</font><br><br>Sm<br><span class="label">Samarium</span></th>
+                <th class="elements lanthanide"><font size="1">63</font><br><br>Eu<br><span class="label">Europium</span></th>
+                <th class="elements lanthanide"><font size="1">64</font><br><br>Gd<br><span class="label">Gadolinium</span></th>
+                <th class="elements lanthanide"><font size="1">65</font><br><br>Tb<br><span class="label">Terbium</span></th>
+                <th class="elements lanthanide"><font size="1">66</font><br><br>Dy<br><span class="label">Dysprosium</span></th>
+                <th class="elements lanthanide"><font size="1">67</font><br><br>Ho<br><span class="label">Holmium</span></th>
+                <th class="elements lanthanide"><font size="1">68</font><br><br>Er<br><span class="label">Erbium</span></th>
+                <th class="elements lanthanide"><font size="1">69</font><br><br>Tm<br><span class="label">Thulium</span></th>
+                <th class="elements lanthanide"><font size="1">70</font><br><br>Yb<br><span class="label">Ytterbium</span></th>
+                <th class="elements lanthanide"><font size="1">71</font><br><br>Lu<br><span class="label">Lutetium</span></th>
+            </tr>
+            <tr>
+                <th class="empty-spaces" colspan="3"></th>
+                <th class="elements actinide"><font size="1">89</font><br><br>Ac<br><span class="label">Actinium</span></th>
+                <th class="elements actinide"><font size="1">90</font><br><br>Th<br><span class="label">Thorium</span></th>
+                <th class="elements actinide"><font size="1">91</font><br><br>Pa<br><span class="label">Protactinium</span></th>
+                <th class="elements actinide"><font size="1">92</font><br><br>U<br><span class="label">Uranium</span></th>
+                <th class="elements actinide"><font size="1">93</font><br><br>Np<br><span class="label">Neptunium</span></th>
+                <th class="elements actinide"><font size="1">94</font><br><br>Pu<br><span class="label">Plutonium</span></th>
+                <th class="elements actinide"><font size="1">95</font><br><br>Am<br><span class="label">Americium</span></th>
+                <th class="elements actinide"><font size="1">96</font><br><br>Cm<br><span class="label">Curium</span></th>
+                <th class="elements actinide"><font size="1">97</font><br><br>Bk<br><span class="label">Berkelium</span></th>
+                <th class="elements actinide"><font size="1">98</font><br><br>Cf<br><span class="label">Californium</span></th>
+                <th class="elements actinide"><font size="1">99</font><br><br>Es<br><span class="label">Einsteinium</span></th>
+                <th class="elements actinide"><font size="1">100</font><br><br>Fm<br><span class="label">Fermium</span></th>
+                <th class="elements actinide"><font size="1">101</font><br><br>Md<br><span class="label">Mendelevium</span></th>
+                <th class="elements actinide"><font size="1">102</font><br><br>No<br><span class="label">Nobelium</span></th>
+                <th class="elements actinide"><font size="1">103</font><br><br>Lr<br><span class="label">Lawrencium</span></th>
+            </tr>            
+        </table>
+    </body>
+</html>

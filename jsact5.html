@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 5</title>
+        <link rel="icon" type="image/x-icon" href="JavaScript.png">
+    </head>
+
+    <body style="text-align: center;">
+        <h2>Age Evaluator</h2> <!--Determine YOUR AGE via birthyear-->
+        <label for="birthYear">Enter your birth year:</label><br>
+        <input type="number" id="birthYear"><br><br>
+
+        <button onclick="calculateAge()">Check Age</button>
+
+        <p id="result"></p>
+
+        <script>
+            function calculateAge() {
+                const birthYear = document.getElementById("birthYear").value;
+                const currentYear = new Date().getFullYear();
+
+                if (birthYear === "" || birthYear > currentYear || birthYear < 1900) {
+                document.getElementById("result").innerText = "Please enter a valid year.";
+                return;
+                }
+
+                const age = currentYear - birthYear;
+                document.getElementById("result").innerText = "You are " + age + " years old.";
+            }
+        </script>
+    </body>
+</html>

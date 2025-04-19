@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 8</title>
+        <link rel="icon" type="image/x-icon" href="https://www.iconarchive.com/download/i137853/microsoft/fluentui-emoji-3d/Play-Button-3d.1024.png">
+        <style>
+            body {
+                background-image: url(press-button.gif);
+                background-repeat: no-repeat;
+                background-attachment:  fixed; 
+                background-position: center;
+                background-size: cover;
+                font-family: Roboto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .button-computer {
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+                padding: 20px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1.2em;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            /* Button styles for BSIT */
+            .bsit {
+                background-color: #f51c1c; 
+                color: white;
+            }
+
+            /* Button styles for BSCS */
+            .bscs {
+                background-color: #118cf1;
+                color: white;
+            }
+
+            button:active {
+                transform: scale(0.95);
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="button-computer">
+            <!-- Left Button (BSIT) -->
+            <button id="btnLeft" class="bsit" onclick="swapButtons()">BSIT</button>
+            <!-- Right Button (BSCS) -->
+            <button id="btnRight" class="bscs" onclick="swapButtons()">BSCS</button>
+        </div>
+        <script src="jsact8.js"></script>
+    </body>
+</html>

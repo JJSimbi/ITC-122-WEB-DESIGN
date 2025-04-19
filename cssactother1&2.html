@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input+Padding</title>
+        <link rel="icon" type="image/x-icon" href="chocolate.png">
+        <style>
+            /* General input and select styles */
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #4e2a47;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: #fff5f2;
+                color: #4e2a47;
+                font-family: 'Arial', sans-serif;
+            }
+
+            /* Submit button styles */
+            input[type=submit] {
+                width: 100%;
+                background-color: #7b3f00;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            input[type=submit]:hover {
+                background-color: #5e2a00;
+            }
+
+            /* Form container */
+            div {
+                border-radius: 5px;
+                background-color: #f8e6d1;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: bold;
+                color: #4e2a47;
+            }
+
+            /* Focus effect for input fields */
+            input[type=text]:focus, select:focus {
+                border-color: #7b3f00;
+                outline: none;
+            }
+        </style>
+        <script>
+            // JavaScript to prevent the form from resetting and submitting in the usual way
+            function preventFormReset(event) {
+                event.preventDefault(); // Prevent default form submission
+                alert("Form submitted!"); // Display a message (you can remove this if not needed)
+                // You can add additional logic here for handling the form data
+            }
+        </script>
+    </head>
+    <body>
+        <h3 align="center" style="font-family: 'Arial', sans-serif; color: #7b3f00;">Chocolates Form</h3>
+
+        <div>
+            <form action="/action_page.php" onsubmit="preventFormReset(event)">
+                <!--Types of Chocolates-->
+                <label for="fname">Type of Chocolate</label>
+                <input type="text" id="fname" name="firstname" placeholder="dark, sweetened, etc..." required>
+
+                <label for="lname">Percentage of Chocolate</label>
+                <input type="text" id="lname" name="lastname" placeholder="(%percentage)..." required>
+
+                <label for="country">Country</label>
+                <!--Countries-->
+                <select id="country" name="country" required>
+                    <option value="japan">Japan</option>
+                    <option value="philippines">Philippines</option>
+                    <option value="usa">USA</option>
+                    <option value="africa">Africa</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    background: #470000;
+    text-transform: uppercase;
+    color:#ffb7b7;
+    text-align:center;
+    margin-top:380px;
+}
+.baezreal-video{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.ezreal{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 75px;
+    font-family: poppins;
+    line-height: 100px;
+    animation: animate 5s ease-in-out infinite;
+    text-shadow:    0 1px 0 hsl(174, 5%, 80%),
+                    0 2px 0 hsl(174, 5%, 75%),
+                    0 3px 0 hsl(174, 5%, 70%),
+                    0 0 5px rgba(0, 0, 0, .05),
+                    0 3px 5px rgba(0, 0, 0, .2),
+                    0 5px 10px rgba(0, 0, 0, .2),
+                    0 10px 10px rgba(0, 0, 0, .2),
+                    0 20px 20px rgba(0, 0, 0, .3);
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(75px);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

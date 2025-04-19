@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NBSpaces</title>
+        <link rel="icon" type="image/x-icon" href="3Dpasta.png">
+        <style>
+            body {
+                background-image: url('pasta.png');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+                margin: 100px;
+                text-align: center;
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            p {
+                font-size: 40px;
+                line-height: 1.5;
+                color: #555;
+            }
+
+            #pasta {
+                background-color: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px rgba(255, 214, 80, 0.795);
+                text-align: center;
+            }
+
+            .pasta3d {
+                position:absolute;
+                width: 170px;
+                height: 120px;
+                top:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="3Dpasta.png" alt="3D pasta" class="pasta3d">
+        <div id="pasta">    <!--Pasta List-->
+            <p>Farfalle,&nbsp;Fettuccine,&nbsp;Fusilli,&nbsp;Linguine,&nbsp;Orecchiette,
+                Penne,&nbsp;Ravioli,&nbsp;Rigatoni,&nbsp;Spaghetti</p>
+        </div>
+    </body>
+</html>

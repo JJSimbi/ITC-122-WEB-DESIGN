@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 9</title>
+        <link rel="icon" type="image/x-icon" href="astrobot-img.jpg">
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: url('robot-tech.gif') no-repeat center center fixed;
+                background-size: cover;
+                color: white;
+                font-family: 'Orbitron', sans-serif;
+                text-align: center;
+                transition: background 0.5s ease, background-image 0.5s ease;
+            }
+
+            .astrobot-text {
+                font-size: 48px;
+                font-weight: bold;
+                margin-top: 20px;
+                animation: glow 2s infinite alternate;
+                color: #0ff;
+                transition: color 0.5s ease;
+            }
+
+            .astrobot-text.sleeping {
+                color: darkblue;
+                animation: none;
+            }
+
+            @keyframes glow {
+                0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+                100% { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+            }
+
+            .astrobot-character {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 80vh;
+            }
+
+            #astroBot {
+                max-width: 300px;
+                margin: 20px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .click-text {
+                font-size: 20px;
+                color: #0ff;
+                animation: bounce 1s infinite;
+                font-family: 'Orbitron', sans-serif;
+                text-shadow: 0 0 5px rgb(0, 63, 63), 0 0 10px rgb(0, 63, 63);            
+            }
+
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-5px); }
+            }
+
+
+            /* Default large size for greet */
+            #astroBot.large {
+                max-width: 300px;
+            }
+
+            /* Enlarged size for dance and sleep */
+            #astroBot.enlarged {
+                max-width: 400px;
+            }
+            
+
+            #astroBot:hover {
+                transform: scale(1.05);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1 class="astrobot-text">ASTRO BOT</h1>
+
+        <!--Astrobot Music Audio {hidden}-->
+        <audio id="astrobotMusic" autoplay loop hidden>
+            <source src="I Am Astro Bot (ASTRO BOT Remix).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="astrobot-character">
+            <img id="astroBot" src="Astro-Bot-Greet.gif" alt="Astro Bot">
+            <p class="click-text">&nbsp;Click Me 👆&nbsp;</p>
+        </div>
+
+        <script src="jsact9.js"></script>
+    </body>
+
+</html>

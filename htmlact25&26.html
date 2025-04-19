@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Div & Span</title>
+        <link rel="icon" type="image/x-icon" href="pineapple.png">
+        <style>
+            @keyframes fadeEffect {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .fade-centered-text {
+                animation: fadeEffect 10s ease-in-out infinite; /* Fade animation over 10 seconds */
+                font-size: 100px;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url('pineapple.jpg');
+                background-color: rgba(252, 238, 176, 0.7);
+                background-blend-mode:saturation;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fade-centered-text">
+            <center>
+                <br><br>
+                <!--Pine-Apple-Pen Text-->
+                <span style="color: yellow;">PINE</span>-<span style="color: red;">APPLE</span>-PEN
+            </center>
+        </div>
+    </body>
+</html>

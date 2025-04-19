@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comments</title>
+        <link rel="icon" type="image/x-icon" href="comments.png">
+        <style>
+            code {
+                display: block;
+                font-family: monospace;
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+
+            #comment-img {
+                display: none; /* hidden by default */
+            }
+
+            button {
+                margin: 15px;
+                padding: 8px 16px;
+                font-size: 1em;
+                cursor: pointer;
+            }
+
+            #background-video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                z-index: -1; /* keeps it behind all content */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Background Video -->
+        <video id="background-video" autoplay muted loop>
+            <source src="code.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <div style="border: 2px solid black;">
+            <h2 style="border-bottom: 2px solid black;">
+                <span style="padding-left: 20px;">Comment Syntax Showcase</span>
+            </h2>
+            <div style="padding-left: 20px;">
+                <code><b>This is an HTML COMMENT</b>: &lt;!-- This is a comment --&gt;</code>
+                <code><b>This is a CSS COMMENT</b>: /* This is a comment */</code>
+                <code><b>This is a JavaScript COMMENT</b>: // This is a comment</code>
+            </div>
+
+            <div align="center"><br>
+                <button onclick="toggleImage()">Press/Hide Example</button>
+                <br><br>
+                <img id="comment-img" src="comment-section.png" alt="comment-html-css-js">
+                <br><br>
+            </div>
+        </div>
+
+        <script>
+            function toggleImage() {
+                const img = document.getElementById("comment-img"); //if-else statement for the Hide/See Button
+                if (img.style.display === "none") {
+                    img.style.display = "block";
+                } else {
+                    img.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript 4</title>
+        <link rel="icon" type="image/x-icon" href="JavaScript.png">
+        <style>
+
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #ff8a8a;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                color: #333;
+            }
+
+            .container {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 80%;
+                max-width: 500px;
+            }
+
+            h2 {
+                color: #af4c4c;
+            }
+
+            label {
+                font-size: 1.1em;
+                color: #333;
+            }
+
+            select {
+                padding: 10px;
+                font-size: 1em;
+                border-radius: 5px;
+                margin-top: 10px;
+                width: 100%;
+                border: 1px solid #ccc;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1.1em;
+                background-color: #af4c4c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #491515;
+            }
+
+            .output {
+                margin-top: 30px;
+                padding: 15px;
+                background-color: #e7f5e4;
+                border-radius: 8px;
+                font-size: 1.2em;
+                color: #333;
+                display: none;
+            }
+
+            /* Specific colors for each blood type */
+            .Oplus {
+                background-color: #D32F2F; /* O+ red */
+                color: white;
+            }
+
+            .Ominus {
+                background-color: #B71C1C; /* O- dark red */
+                color: white;
+            }
+
+            .Aplus {
+                background-color: #388E3C; /* A+ green */
+                color: white;
+            }
+
+            .Aminus {
+                background-color: #2C6B3B; /* A- dark green */
+                color: white;
+            }
+
+            .Bplus {
+                background-color: #9C27B0; /* B+ purple */
+                color: white;
+            }
+
+            .Bminus {
+                background-color: #7B1FA2; /* B- dark purple */
+                color: white;
+            }
+
+            .ABplus {
+                background-color: #FF9800; /* AB+ orange */
+                color: white;
+            }
+
+            .ABminus {
+                background-color: #F57C00; /* AB- darker orange */
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <h2>Blood Type Personality</h2>
+        <label for="bloodType">Choose your Blood Type:</label>
+        <select id="bloodType">
+            <option value="">Select Blood Type</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+        <button onclick="showBloodTypeInfo()">Get Personality Info</button>
+
+        <div class="output" id="bloodInfo"></div>
+    </div>
+
+        <script src="jsact4.js"></script>
+    </body>
+</html>

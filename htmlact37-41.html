@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms 3</title>
+        <link rel="icon" type="image/x-icon" href="MBTI.png">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding-right: 40px;
+                padding-left: 40px;
+                background: linear-gradient(135deg, #1c2b2d, #402350);
+                color: white;
+            }
+            form {
+                margin-bottom: 20px;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 20px;
+                border-radius: 10px;
+                backdrop-filter: blur(4px);
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="submit"],
+            input[type="reset"],
+            input[type="button"] {
+                margin-top: 10px;
+                margin-right: 10px;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 6px;
+                background-color: #4c1375;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mini MBTI Sample Test</h1>
+        <!-- MBTI TEST FORM -->
+        <form id="mbti-form">
+            <!-- Dropdown (E/I) -->
+            <label for="ei">How do you recharge?</label>
+            <select name="ei" id="ei">
+                <option value="E" required>Spending time with others</option>
+                <option value="I" required>Spending time alone</option>
+            </select>
+
+            <!-- Checkbox (S/N) -->
+            <br><br>
+            <label>What do you rely on more? (You can pick both)</label>
+            <input type="checkbox" name="sn" value="S"> Facts & experience <br>
+            <input type="checkbox" name="sn" value="N"> Impressions & meanings
+
+            <!-- Radio buttons (T/F) -->
+            <br><br>
+            <label>When making decisions, you value:</label>
+            <input type="radio" name="tf" value="T" required> Logic & fairness <br>
+            <input type="radio" name="tf" value="F" required> Harmony & empathy
+
+            <!-- Judging/Perceiving -->
+            <br><br>
+            <label>How do you like to live your day?</label>
+            <input type="radio" name="jp" value="J" required> Scheduled & organized <br>
+            <input type="radio" name="jp" value="P" required> Flexible & spontaneous
+
+
+            <!-- Screenshot Results-->
+            <br><br>
+            <label for="fileupload">Upload a screenshot of your result:</label><br>
+            <input type="file" name="fileupload" id="fileupload" accept="image/*" required>
+
+            <!-- Submit and Reset Buttons -->
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="OK" onclick="alert('Thanks for clicking OK!')">&nbsp;&nbsp;
+            <input type="image" src="mbti-button.png" alt="Submit as Image" style="width:50px">
+        </form>
+
+        <h2>Your MBTI Type: <span id="result" style="font-size: 20px; font-weight: bold;"></span></h2>
+
+        <script>
+            document.getElementById('mbti-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+        
+                const ei = document.getElementById('ei').value;
+        
+                const snCheckboxes = document.querySelectorAll('input[name="sn"]:checked');
+                let sn = 'S';
+                if (snCheckboxes.length === 1) {
+                    sn = snCheckboxes[0].value;
+                } else if (snCheckboxes.length === 2) {
+                    sn = 'N';
+                }
+        
+                const tf = document.querySelector('input[name="tf"]:checked')?.value;
+                const jp = document.querySelector('input[name="jp"]:checked')?.value;
+        
+                if (!ei || !sn || !tf || !jp) {
+                    alert("Please answer all sections.");
+                    return;
+                }
+        
+                const result = ei + sn + tf + jp;
+                document.getElementById('result').textContent = result;
+            });
+        
+            // Reset also clears result
+            document.getElementById('mbti-form').addEventListener('reset', function () {
+                document.getElementById('result').textContent = '';
+            });
+        </script>    
+
+    </body>
+</html>

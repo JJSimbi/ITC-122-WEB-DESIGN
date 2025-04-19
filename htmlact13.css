@@ -1,0 +1,59 @@
+.samsung-animate{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.samsung-animate span{
+    position: relative;
+}
+
+.samsung-animate span::before{
+    content: "Youtuber";
+    color: #dbf9fa;
+    animation: words 20s infinite;
+}
+
+.samsung-animate span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #06012e;
+    border-left: 2px solid #fcf3f0;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #fadfd500;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "GALAXY S25";
+    }
+    21%,40%{
+        content: "GALAXY S25";
+    }
+    41%,60%{
+        content: "GALAXY S25";
+    }
+    61%,80%{
+        content: "GALAXY S25";
+    }
+    81%,100%{
+        content: "GALAXY S25";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}

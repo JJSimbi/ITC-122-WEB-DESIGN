@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MarqueeBehavior-BgColor</title>
+        <link rel="icon" type="image/x-icon" href="mario-icon.png">
+
+        <style>
+            .marquee-bucket{font-family:Comic Sans MS; font-size:50px;}
+            .peach{position:absolute; top: 12px; right: 100px; width: 260px; height: 175px; z-index: -1;}
+            .luigi{position:absolute; top: 240px; left: 100px; width: 260px; height: 175px; z-index: -1; transform: scaleX(-1);}
+            .mario{position:absolute; top: 475px; left: 500px; width: 360px; height: 275px; z-index: -1;}
+            body{background-image: url('mario-kart.png'); background-position: top center; background-size: cover;}
+        </style>
+    </head>
+    <body>
+        <!--Mario Kart-->
+        <div class="marquee-bucket">
+            <br><br>
+            <img src="Peach.png" class="peach">
+            <img src="Luigi.png" class="luigi">
+            <img src="Mario.png" class="mario">
+            <marquee behavior="scroll" direction="left" scrollamount="5" bgcolor=Fuchsia>Princess of Mushroom Kingdom, she graces with elegance, contending with other contenders, PEACH!</marquee><br><br><br>
+            <marquee behavior="scroll" direction="right" scrollamount="10" bgcolor=green>Brotherhood of all brothers, tall, nervous yet kind, he's here to make a statement, LUIGI!</marquee><br><br><br>
+            <marquee behavior="scroll" direction="up" scrollamount="20" height="250" vspace="100" bgcolor=maroon><p align="center">Icon Amongst Triumphs, with a tremendous mustache and for being Italian, challengers may be wary 'cause here is MARIO!</p></marquee>
+        </div>
+    </body>
+</html>
